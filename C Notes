@@ -1,0 +1,61 @@
+C programming notes: 
+Topics:
+1. Compilation
+2. Keywords
+3. Variables
+4. Loops
+
+1. Compilation:
+	Q) What is a compiler?
+	A tool which converts the program/source code into executable file is called compiler.
+
+Q) What is compilation?
+The process where the tool uses to convert the source code into executable file is called compiler.
+* First stage: Pre-processing stage
+	Here, in this stage the compiler first processes the directives that start from # symbol.Where, It includes header files and also macro expansion
+* Second stage: Compilation
+	In this stage, the pre processed code is changed into low level code called object code and Performs analysis of the code like checking the semantic analysis, syntax analysis.
+* Third Stage: Assembly
+	Assembler converts assembly language, which is a low level language created after compilation stage is completed. 
+* Fourth Stage: Linking
+	Suppose multiple source files are there, then multiple object files are created and the importance of this stage is to link all these files together.
+* Fifth Stage: Loading
+	In this stage, the loader performs some additional tasks like dynamic linking and memory allocation
+
+Q) When do you get compilation errors?
+	1. Wrong/Misuse of syntax
+	2. Semantic/Logic error
+	3. Undefined variables, functions, variables
+	4. Incorrect function arguments
+	5. Typographical errors
+	6. Incorrect usage of header
+
+Q) When do you get linking error?
+	Linking is responsible for generting final executable file, by making sure all the object files are linked together.
+	Possible errors are:
+	1. Undefined symbols/definitions
+	2. Multiple definitions for same variable
+	3. Missing libraries
+	4. Order of compilation: 
+	5. Incorrect library versions
+
+Q) What is the difference between segmentation fault and Bus error?
+	Both are the errors caused by invalid memory access
+Segmentation fault:
+	This occurs when it tries to access the memory location that it doesnt have permission to like: Stackoverflow, attempting to modify ROM like string literals, Overflow/Underflow of the array, Dereferencing NULL Pointer
+Bus error:
+	Hardware level memory issues like: Bus refers to channels used by CPU and other hardware, Accessing memory map, attempting to access invalid address that doesn't exist
+
+Q) What happens when Multiple extern variable is declared in multiple C files
+	When such a thing happens, It acts as global variable, and is shared between multiple
+	C files
+
+Q) Why makefile is used?
+	It used to build automation tool to manage and streamline the compilation and linking 	process
+
+Q) What are different modifiers and qualifiers in C?
+	
+
+
+
+ 
