@@ -54,6 +54,157 @@ Q) Why makefile is used?
 	It used to build automation tool to manage and streamline the compilation and linking 	process
 
 Q) What are different modifiers and qualifiers in C?
+	Modifiers and qualifiers are keywords that modify the behaviour of datatypes, a few examples of such modifiers and qaulifiers are:
+> Signed and Usigned modifiers: Where signed uses negative numbers and unsigned uses onlu positive integers(non-negative)
+> Short and Long modifiers: Are used to decrease and increase the the range of the datatypes
+> Qualifiers include:
+	Const: Which used to such that the variable is not changed further
+	Volatile : Is used to indicate that the value can be changed at any point in the program, such as hardware registers or by any other threads
+	Static: For Global variables it changes their linkage to internal, for local variables retains it's value between function calls
+	Extern: Used to declare a variable/function from a another file
+	Register: is used to sugges the compiler to store the values in the register memory of the CPU to have faster access
+
+
+
+
+
+Q) Infinite loops often arise in C, how do we write infinite loop in C?
+	Infinite Loops are executed such that when a repeatative tasks are performed, like blinking LED and similar examples.
+
+> For infinite loop:
+	for(;;){
+	}
+
+> While infinite loop:
+	while(1){
+	}
+>Do-while infinite loop:
+	do{
+	}while(1)
+
+From the above examples it is seen that some true condition has to given everytime the loop completes to have a infinite loop
+
+
+
+Q) How do you code an infinite loop, other methods?
+	To use  the Macros, with the definition
+	for eg:	#define Infinite_Loop for (;;)
+		int main(){
+		 Infinite_Loop;
+		}
+
+Q) Which loop is better FOR or WHILE loop? 
+	Which one is more efficient? 
+		How do you decide which loop to use?
+	Both have same functionality, but the main thing that defers from are the condition execution, for loop, condition checked before the loop is executed. in while loop the statements get executed atleast once, and the condition is checked later.
+
+More efficient and popular is for loop, but we have to know the how many times/iterations it has to be executed. And also the when you have initialization and incrementing operator.
+Whereas when the number of times the condition is satisfied is not known the while loop is used. This is more convenient when the loop is executed n number times when the condition is satisfied.
+
+
+Q) Write a program to check if the given number is palindrome or not?
+	
+// Palindrome program
+
+#include<stdio.h>
+
+int main()
+{
+	int number, Reversenum, remainder, originalnum;
+	Reversenum = 0;
+	
+	printf("Enter a number\n");
+	scanf("%d",&number);
+	originalnum = number;
+	
+	while(number!=0)
+	{
+		remainder = number%10;
+		Reversenum = Reversenum*10 + remainder;
+		number = number/10;
+	}
+	
+	if (Reversenum == originalnum)
+	{
+		printf("The given number is Palindrome\n");
+	}
+	else
+	{
+		printf("The given number is not Palindrome\n");
+	}
+	
+	return 0;
+}
+
+
+
+Q) What is debugging, What are the debugging tools you have been used for C programming?
+	Debugging is the process of identifying and resolving errors in software program. For C programming I have used DEVC++ IDE, which internally depends on GNU Debugger for debugging. What is GNU debugger, it is command line debugger used to debug C/C++ programs.
+
+
+Q) Find the given number if it is a power of 2 or not ?
+	
+// Given number is power of 2 or not
+
+#include<stdio.h>
+
+int main ()
+{
+	int number, pal;
+	
+	printf("Enter a number\n");
+	scanf("%d",&number);
+	
+	if ((number != 0) && ((number & (number - 1)) == 0))
+	{
+		printf("The given number is power of 2\n");
+	}
+	else
+	{
+		printf("The given number is not power of 2\n");
+	}
+	return 0;
+}
+
+
+Q) Write a program to check how many number of bits are set in a number
+	// Number of bits set in a number
+
+#include<stdio.h>
+
+int CountBits(int num,int temp);
+
+int main()
+{
+	int num, count, temp;
+	
+	printf("Enter a positive number\n");
+	scanf("%d",&num);
+	
+	count = CountBits(num,temp);
+	
+	printf("Number of bits set are %d",count);
+}
+
+int CountBits(int num,int temp)
+{
+	
+	
+	if (num ==0 )
+		return 0;
+	else
+		temp = (num&1)+CountBits(num>>1,temp);
+		return temp;
+}
+
+
+Q) 
+	
+
+
+
+
+
 	
 
 
