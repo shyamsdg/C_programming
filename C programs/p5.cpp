@@ -4,7 +4,7 @@ int main()
 int x[4]={2,3,5,7};
 int i;
 int *ptr;
-for(i = 0; i < 6; ++i)
+for(i = 0; i < 4; ++i)
 {
 ptr=&x[i];
 printf("i : %d \n",i);
